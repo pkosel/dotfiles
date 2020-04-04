@@ -119,3 +119,42 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+#
+# volume control
+#
+
+# increase volume
+XF86AudioRaiseVolume
+	pactl set-sink-volume @DEFAULT_SINK@ +5%
+
+# decrease volume
+XF86AudioLowerVolume
+	pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+# mute volume
+XF86AudioMute
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# mute microphone
+XF86AudioMicMute
+	pactl set-source-mute 1 toggle
+
+#
+# screen brightness
+#
+
+# increase backlight
+XF86MonBrightnessUp
+	xbacklight -inc 10
+
+# decrease backlight
+XF86MonBrightnessDown
+	xbacklight -dec 10
+
+#XF86Display
+#XF86WLAN
+#XF86Tools
+#XF86Bluetooth
+#XF86Favorites
+
