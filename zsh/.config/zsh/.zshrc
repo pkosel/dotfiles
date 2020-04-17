@@ -102,6 +102,9 @@ export PLUGINS=/usr/share/zsh/plugins
 source $PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# Pywal
+(cat ~/.cache/wal/sequences &)
+
 
 # vim: set ft=zsh ts=2 sw=2 et:
 
