@@ -1,8 +1,16 @@
 call plug#begin('~/.config/nvim/plugged')
 
+Plug 'stillwwater/vim-nebula'
 Plug 'tpope/vim-commentary'
 
 call plug#end()
+
+if has('termguicolors')
+  set termguicolors
+endif
+
+set background=dark
+colorscheme nebula
 
 let mapleader=","
 
@@ -17,5 +25,5 @@ set tabstop=2
 set shiftwidth=2
 
 
-autocommand FileType c setlocal commentstring=//\ %s
+"autocommand FileType c setlocal commentstring=//\ %s
 
