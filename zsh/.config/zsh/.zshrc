@@ -1,14 +1,9 @@
-#
-# ~/.zshrc
-#
-
 # History
 HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 
 # Options
-
 setopt auto_cd
 
 setopt always_to_end
@@ -104,7 +99,4 @@ source $PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Pywal
 (cat ~/.cache/wal/sequences &)
-
-
-# vim: set ft=zsh ts=2 sw=2 et:
 
