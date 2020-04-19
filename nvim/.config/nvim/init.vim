@@ -1,5 +1,6 @@
 call plug#begin('~/.config/nvim/plugged')
 
+Plug 'junegunn/vim-easy-align'
 Plug 'stillwwater/vim-nebula'
 Plug 'tpope/vim-commentary'
 
@@ -26,4 +27,8 @@ set shiftwidth=2
 
 
 "autocommand FileType c setlocal commentstring=//\ %s
+
+" EasyAlign
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
 
