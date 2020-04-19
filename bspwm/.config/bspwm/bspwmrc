@@ -1,26 +1,27 @@
 #! /bin/sh
 
-sxhkd &
+# autostart
+~/.config/bspwm/autostart.sh &
 
-bspc monitor -d I II III IV V VI VII VIII IX X
+# workspaces
+bspc monitor -d code web chat media other
 
+# config
 bspc config border_width         2
-bspc config window_gap          12
-
+bspc config window_gap           12
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
-bspc rule -a Gimp desktop='^8' state=floating follow=on
-bspc rule -a Chromium desktop='^2'
-bspc rule -a Firefox desktop='^2'
-bspc rule -a mplayer2 state=floating
-bspc rule -a Kupfer.py focus=on
-bspc rule -a Screenkey manage=off
+# border colors
+source ~/.cache/wal/colors.sh
 
-# polybar
-killall polybar; polybar mybar &
+bspc config normal_border_color  "$color08"
+bspc config active_border_color  "$color08"
 
-# wallpaper
-feh --bg-fill ~/Pictures/Wallpapers/dan-magatti-krhOf7RaeDs-unsplash.jpg
+bspc config focused_border_color "$color13"
+
+# rules
+bspc rule -a Alacritty desktop='code' follow=on
+bspc rule -a firefox   desktop='web'  center=on state=floating follow=on rectangle=1440x900+0+0
 
