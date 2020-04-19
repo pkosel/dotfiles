@@ -2,6 +2,10 @@ env:
   WINIT_X11_SCALE_FACTOR: "1.0"
 
 window:
+  dimensions:
+    columns: 100
+    lines: 30
+
   padding:
     x: 20
     y: 20
