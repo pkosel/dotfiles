@@ -1,6 +1,6 @@
 [user]
 	name = Philipp Kosel
-	email = philipp.kosel@gmail.com
+	email = pkosel@fastmail.com
 [credential]
 	helper = cache --timeout=86400
 [core]
