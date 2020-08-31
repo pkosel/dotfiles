@@ -1,10 +1,7 @@
-env:
-  WINIT_X11_SCALE_FACTOR: "1.0"
-
 window:
   dimensions:
-    columns: 100
-    lines: 30
+   columns: 100
+   lines:   30
 
   padding:
     x: 20
@@ -14,16 +11,34 @@ font:
   normal:
     family: JetBrains Mono
 
-  bold:
-    family: JetBrains Mono
-
-  italic:
-    family: JetBrains Mono
-
-  italic:
-    family: JetBrains Mono
-
   size: 13.0
 
-background_opacity: 1.0
+colors:
+  primary:
+    background: '#292a30'
+    foreground: '#dfdfe0'
+
+  cursor:
+    text:   '#292a30'
+    cursor: '#dfdfe0'
+
+  normal:
+    black:   '#414453'
+    red:     '#ff8170'
+    green:   '#78c2b3'
+    yellow:  '#d9c97c'
+    blue:    '#4eb0cc'
+    magenta: '#ff7ab2'
+    cyan:    '#b281eb'
+    white:   '#dfdfe0'
+
+  bright:
+    black:   '#7f8c98'
+    red:     '#ff8170'
+    green:   '#acf2e4'
+    yellow:  '#ffa14f'
+    blue:    '#6bdfff'
+    magenta: '#ff7ab2'
+    cyan:    '#dabaff'
+    white:   '#dfdfe0'
 
