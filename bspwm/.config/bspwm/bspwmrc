@@ -4,24 +4,25 @@
 ~/.config/bspwm/autostart.sh &
 
 # workspaces
-bspc monitor -d code web chat media other
+bspc monitor -d I II III IV V VI
 
 # config
-bspc config border_width         2
-bspc config window_gap           12
-bspc config split_ratio          0.52
-bspc config borderless_monocle   true
-bspc config gapless_monocle      true
+bspc config border_width       2
+bspc config window_gap         12
+bspc config split_ratio        0.52
+bspc config borderless_monocle true
+bspc config gapless_monocle    true
 
 # border colors
-source ~/.cache/wal/colors.sh
+bg=$(xrdb ~/.config/xorg/Xresources -query all | grep background | awk '{print $2}')
+fg=$(xrdb ~/.config/xorg/Xresources -query all | grep foreground | awk '{print $2}')
 
-bspc config normal_border_color  "$color08"
-bspc config active_border_color  "$color08"
+bspc config active_border_color  "$bg"
+bspc config normal_border_color  "$bg"
 
-bspc config focused_border_color "$color13"
+bspc config focused_border_color "$fg"
 
-# rules
-bspc rule -a Alacritty desktop='code' follow=on
-bspc rule -a firefox   desktop='web'  center=on state=floating follow=on rectangle=1440x900+0+0
+# window rules
+bspc rule -a Alacritty desktop='^1'
+bspc rule -a firefox   desktop='^2' state=floating follow=on
 
