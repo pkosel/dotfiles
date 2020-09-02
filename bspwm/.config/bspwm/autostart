@@ -1,0 +1,9 @@
+#!/bin/sh
+
+pkill sxhkd
+pkill polybar
+sleep 0.1
+
+sxhkd &
+# polybar topbar &
+
