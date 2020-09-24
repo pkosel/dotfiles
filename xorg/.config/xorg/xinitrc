@@ -18,6 +18,8 @@ xsetroot -cursor_name left_ptr &
 
 sh ~/.fehbg &
 
+picom &
+
 sxhkd &
 exec bspwm
 
