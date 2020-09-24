@@ -10,6 +10,26 @@ super + Return
 super + @space
 	rofi -show drun
 
+# brightness
+# XF86MonBrightnessUp
+super + ctrl + F6
+  xbacklight -inc 5
+# XF86MonBrightnessDown
+super + ctrl + F5
+  xbacklight -dec 5
+
+# volume
+# XF86AudioRaiseVolume
+super + ctrl + F3
+  volume_increase
+# XF86AudioLowerVolume
+super + ctrl + F2
+  volume_decrease
+
+# XF86AudioMute
+super + ctrl + F1
+  amixer -q sset Master toggle
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
@@ -34,9 +54,9 @@ super + m
 super + y
 	bspc node newest.marked.local -n newest.!automatic.local
 
-# swap the current node and the biggest node
+# swap the current node and the biggest window
 super + g
-	bspc node -s biggest
+	bspc node -s biggest.window
 
 #
 # state/flags
@@ -62,9 +82,9 @@ super + {_,shift + }{h,j,k,l}
 super + {p,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
 
-# focus the next/previous node in the current desktop
+# focus the next/previous window in the current desktop
 super + {_,shift + }c
-	bspc node -f {next,prev}.local
+	bspc node -f {next,prev}.local.!hidden.window
 
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
@@ -119,42 +139,4 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
-
-#
-# volume control
-#
-
-# increase volume
-XF86AudioRaiseVolume
-	pactl set-sink-volume @DEFAULT_SINK@ +5%
-
-# decrease volume
-XF86AudioLowerVolume
-	pactl set-sink-volume @DEFAULT_SINK@ -5%
-
-# mute volume
-XF86AudioMute
-	pactl set-sink-mute @DEFAULT_SINK@ toggle
-
-# mute microphone
-XF86AudioMicMute
-	pactl set-source-mute 1 toggle
-
-#
-# screen brightness
-#
-
-# increase backlight
-XF86MonBrightnessUp
-	xbacklight -inc 10
-
-# decrease backlight
-XF86MonBrightnessDown
-	xbacklight -dec 10
-
-#XF86Display
-#XF86WLAN
-#XF86Tools
-#XF86Bluetooth
-#XF86Favorites
 
