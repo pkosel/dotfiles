@@ -16,10 +16,6 @@ eval $(ssh-agent)
 setxkbmap -model pc105 -layout de &
 xsetroot -cursor_name left_ptr &
 
-sh ~/.fehbg &
-
-picom --experimental-backends &
-
 sxhkd &
 exec bspwm
 
