@@ -1,0 +1,88 @@
+[module/bspwm]
+type = internal/bspwm
+
+label-focused = %name%
+label-focused-foreground = ${colors.primary}
+label-focused-padding = 1
+
+label-occupied = %name%
+label-occupied-padding = 1
+
+label-empty = %name%
+label-empty-padding = 1
+
+[module/alsa]
+type = internal/alsa
+
+format-volume = <ramp-volume> <label-volume>
+label-volume = %percentage%%
+
+format-muted = <label-muted>
+format-muted-prefix = " "
+format-muted-prefix-foreground = ${colors.primary}
+label-muted = muted
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-foreground = ${colors.primary}
+
+[module/memory]
+type = internal/memory
+interval = 1
+
+format = <label>
+format-prefix = " "
+format-prefix-foreground = ${colors.primary}
+label = %percentage_used:2%%
+
+[module/cpu]
+type = internal/cpu
+interval = 1
+
+format = <label>
+format-prefix = " "
+format-prefix-foreground = ${colors.primary}
+label = %percentage:2%%
+
+[module/wlan]
+type = internal/network
+interface = wlp7s0
+interval = 3.0
+
+format-connected = <ramp-signal> <label-connected>
+label-connected = %essid%
+
+format-disconnected =
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-foreground = ${colors.primary}
+
+[module/eth]
+type = internal/network
+interface = enp6s0
+interval = 3.0
+
+format-connected-prefix = " "
+format-connected-prefix-foreground = ${colors.primary}
+label-connected = %local_ip%
+
+format-disconnected =
+
+[module/date]
+type = internal/date
+interval = 1
+
+date = "%Y-%m-%d"
+time = %H:%M
+
+format = <label>
+format-prefix = " "
+format-prefix-foreground = ${colors.primary}
+label = %date% %time%
+
+; vim:ft=dosini
+

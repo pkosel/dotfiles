@@ -1,6 +1,7 @@
 #!/bin/sh
 
-sh ~/.fehbg &
+$HOME/.config/polybar/launch.sh &
+~/.fehbg &
 run_dunst &
 picom --experimental-backends &
 
