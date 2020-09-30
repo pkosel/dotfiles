@@ -17,7 +17,7 @@ font-0 = "JetBrains Mono:style=Regular:pixelsize=8;2"
 font-1 = "Siji:size=12;2"
 
 modules-left = bspwm 
-modules-right = alsa memory cpu wlan eth date
+modules-right = alsa memory cpu wlan eth battery date
 
 wm-restack = bspwm
 
