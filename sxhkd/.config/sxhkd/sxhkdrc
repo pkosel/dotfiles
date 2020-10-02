@@ -34,6 +34,10 @@ super + ctrl + F1
 alt + shift + x
   betterlockscreen -l dim
 
+# firefox
+super + ctrl + f
+  resize_firefox
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
