@@ -11,8 +11,9 @@ bspc config border_width       2
 bspc config window_gap         12
 bspc config split_ratio        0.52
 bspc config borderless_monocle true
-bspc config gapless_monocle    true
-bspc config top_padding        40
+bspc config gapless_monocle    false
+bspc config top_padding        28
+bspc config single_monocle     true
 
 # border colors
 bg=$(xrdb ~/.config/xorg/Xresources -query all | grep background | awk '{print $2}')
