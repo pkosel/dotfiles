@@ -1,12 +1,15 @@
 #!/bin/zsh
 
-# default programs
+# Default programs
 export EDITOR=nvim
 export PAGER=less
 
-# path
+# Path
 export PATH=$PATH:$HOME/.local/bin
 
-# clean home
+# Clean home
 export XINITRC=$HOME/.config/xorg/xinitrc
+
+# Less
+export LESSHISTFILE=$HOME/.config/less/lesshst
 

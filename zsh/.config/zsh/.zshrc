@@ -92,7 +92,7 @@ precmd () { vcs_info }
 PROMPT=$'\n%F{blue}%~%f${vcs_info_msg_0_}\n%F{cyan}>%f '
 
 # Load plugins
-export PLUGINS=/usr/share/zsh/plugins
+PLUGINS=/usr/share/zsh/plugins
 
 source $PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
