@@ -11,4 +11,11 @@
 	ci = commit
 	co = checkout
 	st = status
-
+[pull]
+	rebase = false
+[mergetool "nvim"]
+  cmd = nvim -d $LOCAL $MERGED $REMOTE 
+[merge]
+  tool = nvim
+[mergetool]
+  prompt = false
