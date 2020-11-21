@@ -51,6 +51,9 @@ alias ls='ls --color=auto'
 alias ll='ls -lFhv'
 alias la='ls -lFhva'
 
+# Force xterm on ssh sessions
+alias ssh='TERM=xterm ssh'
+
 # Colored man pages
 export LESS_TERMCAP_md=$'\e[1;36m'
 export LESS_TERMCAP_me=$'\e[0m'
@@ -96,4 +99,8 @@ PLUGINS=/usr/share/zsh/plugins
 
 source $PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# fzf
+source /usr/share/fzf/completion.zsh
+source /usr/share/fzf/key-bindings.zsh
 

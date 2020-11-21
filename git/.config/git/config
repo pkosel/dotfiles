@@ -13,9 +13,9 @@
 	st = status
 [pull]
 	rebase = false
-[mergetool "nvim"]
-  cmd = nvim -d $LOCAL $MERGED $REMOTE 
 [merge]
-  tool = nvim
+  tool = vimdiff
 [mergetool]
   prompt = false
+[mergetool "vimdiff"]
+  cmd = nvim -d $LOCAL $MERGED $REMOTE 
