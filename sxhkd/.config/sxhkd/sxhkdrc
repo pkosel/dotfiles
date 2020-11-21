@@ -21,10 +21,10 @@ super + ctrl + F5
 # volume
 # XF86AudioRaiseVolume
 super + ctrl + F3
-  volume_increase
+  increase-volume.sh
 # XF86AudioLowerVolume
 super + ctrl + F2
-  volume_decrease
+  decrease-volume.sh
 
 # XF86AudioMute
 super + ctrl + F1
@@ -36,7 +36,7 @@ alt + shift + x
 
 # firefox
 super + ctrl + f
-  resize_firefox
+  resize-firefox.sh
 
 # make sxhkd reload its configuration files:
 super + Escape
