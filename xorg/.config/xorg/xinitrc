@@ -13,7 +13,7 @@ fi
 
 eval $(ssh-agent)
 
-setxkbmap -model pc105 -layout de &
+setxkbmap -layout eu &
 xsetroot -cursor_name left_ptr &
 
 sxhkd &
