@@ -13,3 +13,5 @@ export XINITRC=$HOME/.config/xorg/xinitrc
 # Less
 export LESSHISTFILE=$HOME/.config/less/lesshst
 
+# Rust
+source "$HOME/.cargo/env"
