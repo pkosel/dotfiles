@@ -19,3 +19,5 @@
   prompt = false
 [mergetool "vimdiff"]
   cmd = nvim -d $LOCAL $MERGED $REMOTE 
+[init]
+	defaultBranch = master
