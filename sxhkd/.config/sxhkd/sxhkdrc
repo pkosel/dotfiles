@@ -30,6 +30,11 @@ super + ctrl + F2
 super + ctrl + F1
   amixer -q sset Master toggle
 
+# screenshot
+super + ctrl + s
+  scrot '%Y-%m-%d-%T.png' -e 'mv $f ~/Pictures/Screenshots/' && \
+    notify-send "Screenshot captured"
+
 # lockscreen
 alt + shift + x
   betterlockscreen -l dim
