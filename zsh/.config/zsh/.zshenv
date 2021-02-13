@@ -1,17 +1,28 @@
 #!/bin/zsh
 
-# Default programs
+export BAT_THEME="base16"
 export EDITOR=nvim
+export LESSHISTFILE=$HOME/.config/less/lesshst
 export PAGER=less
-
-# Path
 export PATH=$PATH:$HOME/.local/bin
-
-# Clean home
 export XINITRC=$HOME/.config/xorg/xinitrc
 
-# Less
-export LESSHISTFILE=$HOME/.config/less/lesshst
+# fzf
+export FZF_DEFAULT_OPTS="
+--bind '?:toggle-preview'
+--bind 'ctrl-a:select-all'
+--color='16'
+--height=80%
+--info=inline
+--layout=reverse
+--multi
+--preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'
+--preview-window=:hidden
+"
 
-# Rust
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+# rust
 source "$HOME/.cargo/env"
+
