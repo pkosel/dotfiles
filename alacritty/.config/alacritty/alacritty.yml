@@ -1,44 +1,41 @@
 window:
   dimensions:
    columns: 100
-   lines:   30
-
+   lines: 30
   padding:
-    x:      20
-    y:      20
+    x: 20
+    y: 20
 
 font:
   normal:
     family: JetBrains Mono
+  size: 13.0
 
-  size:     13.0
+schemes:
+  challenger-deep: &challenger-deep
+    primary:
+      background: '0x1b182c'
+      foreground: '0xcbe3e7'
 
-colors:
-  primary:
-    background: '#292a30'
-    foreground: '#dfdfe0'
+    normal:
+      black:   '0x100e23'
+      red:     '0xff8080'
+      green:   '0x95ffa4'
+      yellow:  '0xffe9aa'
+      blue:    '0x91ddff'
+      magenta: '0xc991e1'
+      cyan:    '0xaaffe4'
+      white:   '0xcbe3e7'
 
-  cursor:
-    text:       '#292a30'
-    cursor:     '#dfdfe0'
+    bright:
+      black:   '0x565575'
+      red:     '0xff5458'
+      green:   '0x62d196'
+      yellow:  '0xffb378'
+      blue:    '0x65b2ff'
+      magenta: '0x906cff'
+      cyan:    '0x63f2f1'
+      white:   '0xa6b3cc'
 
-  normal:
-    black:      '#414453'
-    red:        '#ff8170'
-    green:      '#78c2b3'
-    yellow:     '#d9c97c'
-    blue:       '#4eb0cc'
-    magenta:    '#ff7ab2'
-    cyan:       '#b281eb'
-    white:      '#dfdfe0'
-
-  bright:
-    black:      '#7f8c98'
-    red:        '#ff8170'
-    green:      '#acf2e4'
-    yellow:     '#ffa14f'
-    blue:       '#6bdfff'
-    magenta:    '#ff7ab2'
-    cyan:       '#dabaff'
-    white:      '#dfdfe0'
+colors: *challenger-deep
 
