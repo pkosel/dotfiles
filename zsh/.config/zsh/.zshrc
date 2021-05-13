@@ -4,7 +4,7 @@ HISTSIZE=10000
 SAVEHIST=10000
 
 # Options
-setopt auto_cd
+# setopt auto_cd
 
 setopt always_to_end
 setopt auto_menu
@@ -103,4 +103,7 @@ source $PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # fzf
 source /usr/share/fzf/completion.zsh
 source /usr/share/fzf/key-bindings.zsh
+
+# zoxide
+eval "$(zoxide init zsh)"
 
