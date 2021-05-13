@@ -3,8 +3,11 @@
 export BAT_THEME="base16"
 export EDITOR=nvim
 export LESSHISTFILE=$HOME/.config/less/lesshst
+export NNN_FIFO=/tmp/nnn.fifo
+export NNN_PLUG='v:preview-tui-ext'
 export PAGER=less
 export PATH=$PATH:$HOME/.local/bin
+export TERMINAL=alacritty
 export XINITRC=$HOME/.config/xorg/xinitrc
 
 # fzf
