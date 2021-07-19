@@ -15,6 +15,14 @@ label-empty-padding = 1
 type = internal/xwindow
 label = %title:0:30:...%
 
+[module/active-window]
+type = custom/ipc
+hook-0 = cat /tmp/active-window-hook
+initial = 1
+
+format-prefix = " "
+format-prefix-foreground = ${colors.primary}
+
 [module/date]
 type = internal/date
 interval = 1
