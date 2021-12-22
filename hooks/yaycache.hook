@@ -1,0 +1,12 @@
+[Trigger]
+Operation = Upgrade
+Operation = Remove
+Type = Package
+Target = *
+
+[Action]
+Description = Cleaning pacman and yay cache...
+When = PostTransaction
+Exec = /home/philipp/.local/bin/yaycache.sh
+Depends = pacman-contrib
+
