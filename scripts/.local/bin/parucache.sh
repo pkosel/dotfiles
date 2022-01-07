@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-cachedir="/home/philipp/.cache/yay"
+cachedir="/home/philipp/.cache/paru"
 
 removed="$(comm -23 <(basename -a $(find $cachedir -mindepth 1 -maxdepth 1 -type d) | sort) <(pacman -Qqm) | xargs -r printf "$cachedir/%s\n")"
 
-# Remove yay cache for foreign packages that are not installed anymore
+# Remove paru cache for foreign packages that are not installed anymore
 rm -rf $removed
 
 pkgcache="$(find $cachedir -mindepth 1 -maxdepth 1 -type d | xargs -r printf "-c %s\n")"

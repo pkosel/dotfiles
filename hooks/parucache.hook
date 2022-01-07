@@ -5,8 +5,8 @@ Type = Package
 Target = *
 
 [Action]
-Description = Cleaning pacman and yay cache...
+Description = Cleaning pacman and paru cache...
 When = PostTransaction
-Exec = /home/philipp/.local/bin/yaycache.sh
+Exec = /home/philipp/.local/bin/parucache.sh
 Depends = pacman-contrib
 
