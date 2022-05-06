@@ -28,7 +28,8 @@ super + ctrl + F2
 
 # XF86AudioMute
 super + ctrl + F1
-  amixer -q sset Master toggle
+  # amixer -q sset Master toggle
+  pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # screenshot
 super + ctrl + s
