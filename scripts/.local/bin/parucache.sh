@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cachedir="/home/philipp/.cache/paru"
+cachedir="/home/philipp/.cache/paru/clone"
 
 removed="$(comm -23 <(basename -a $(find $cachedir -mindepth 1 -maxdepth 1 -type d) | sort) <(pacman -Qqm) | xargs -r printf "$cachedir/%s\n")"
 
